@@ -1,28 +1,28 @@
 #+TODO: TODO(t) | DONE(d)
-#+TODO: IN_PROGRESS(i) | OPENED(o)
+#+TODO: IN_PROGRESS(i) OPENED(o)
 #+TAGS: algorithms spoj books tutorial CPP
 #+TAGS: dynamic_programming binary_search dfs bfs math combinatorics probability ad_hoc loops 
 
 
 * TODO Algorithms                                                                                           :algorithms:
 ** TODO SPOJ Problems                                                                                             :spoj:
-*** TODO Old [35%]                                              :dynamic_programming:binary_search:ad_hoc:combinatorics:
+*** IN_PROGRESS Old [50%]                                       :dynamic_programming:binary_search:ad_hoc:combinatorics:
     * [X] http://www.spoj.com/problems/BYTESM2/
     * [ ] http://www.spoj.com/problems/AGGRCOW/
     * [ ] http://www.spoj.com/problems/HPYNOS/
     * [ ] http://www.spoj.com/problems/HUBULLU/
     * [X] http://www.spoj.com/problems/PIGBANK/
-    * [ ] http://www.spoj.com/problems/TRT/
+    * [X] http://www.spoj.com/problems/TRT/
     * [X] http://www.spoj.com/problems/PARTY/
     * [ ] http://www.spoj.com/problems/MARBLES/
     * [ ] http://www.spoj.com/problems/PT07Z/
     * [ ] http://www.spoj.com/problems/INVCNT/
     * [ ] http://www.spoj.com/problems/PT07Y/
-    * [ ] http://www.spoj.com/problems/ACODE/
+    * [X] http://www.spoj.com/problems/ACODE/
     * [X] http://www.spoj.com/problems/CANDY3/
     * [X] http://www.spoj.com/problems/COINS/
       * Note :: there is some global constatn used in recursive and memoized versions of the program. Not shure what the purpose of it is.
-*** TODO New
+*** OPENED New
     * [X] http://www.spoj.com/problems/ENIGMATH/
       #+BEGIN_SRC C
         long long nzd(long long a, long long b)
