@@ -1,0 +1,77 @@
+#+TODO: TODO(t) | DONE(d)
+#+TODO: IN_PROGRESS(i) | OPENED(o)
+#+TAGS: algorithms spoj books tutorial CPP
+#+TAGS: dynamic_programming binary_search dfs bfs math combinatorics probability ad_hoc loops 
+
+
+* TODO Algorithms                                                                                           :algorithms:
+** TODO SPOJ Problems                                                                                             :spoj:
+*** TODO Old [35%]                                              :dynamic_programming:binary_search:ad_hoc:combinatorics:
+    * [X] http://www.spoj.com/problems/BYTESM2/
+    * [ ] http://www.spoj.com/problems/AGGRCOW/
+    * [ ] http://www.spoj.com/problems/HPYNOS/
+    * [ ] http://www.spoj.com/problems/HUBULLU/
+    * [X] http://www.spoj.com/problems/PIGBANK/
+    * [ ] http://www.spoj.com/problems/TRT/
+    * [X] http://www.spoj.com/problems/PARTY/
+    * [ ] http://www.spoj.com/problems/MARBLES/
+    * [ ] http://www.spoj.com/problems/PT07Z/
+    * [ ] http://www.spoj.com/problems/INVCNT/
+    * [ ] http://www.spoj.com/problems/PT07Y/
+    * [ ] http://www.spoj.com/problems/ACODE/
+    * [X] http://www.spoj.com/problems/CANDY3/
+    * [X] http://www.spoj.com/problems/COINS/
+      * Note :: there is some global constatn used in recursive and memoized versions of the program. Not shure what the purpose of it is.
+*** TODO New
+    * [X] http://www.spoj.com/problems/ENIGMATH/
+      #+BEGIN_SRC C
+        long long nzd(long long a, long long b)
+        {
+                long long tmp;
+
+                while (b != 0)
+                {
+                        tmp = b;
+                        b = a % b;
+                        a = tmp;
+                }
+
+                return a;
+        }
+        int main()
+        {
+                int t;
+                long long a, b;
+                scanf("%d", &t);
+                while (t != 0)
+                {
+                        scanf("%lld%lld", &a, &b);
+                        printf("%lld %lld\n", b / nzd(a, b), a / nzd(a, b));
+                        t--;
+                }
+                return 0;
+        }
+
+        /* Jer ax - by = 0
+           pa ax = by
+           pa podeljeno sa a: x = b/a * y
+           pa podeljeno sa y: x/y = b/a
+           posto x i y treba da budu min, trazis nzd za b i a i onda ih skratis sa tim brojem i dobices minimalno
+           Npr: 4/12 pa je nzd 4 pa podelis oba i dobijes 1/3 i onda je x = 1, a y = 3 :) :) :)
+        ,*/
+      #+END_SRC
+    * [X] http://www.spoj.com/problems/FAVDICE/
+    * [X] http://www.spoj.com/problems/PHONELST/
+
+** TODO Topcoder
+*** TODO Get started
+    * [ ] Create an account
+    * [ ] Go through introduction
+** TODO Text Books, Tutorials                                                                            :tutorial:books:
+   * The Algorithm Design Manual [[http://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1849967202][amazon_link]]
+   * Topcoder tutorials [[https://www.topcoder.com/community/data-science/data-science-tutorials/][tutorials]] [0/2]
+     + [ ] Binary serach [[https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/][binary search]]
+     + [ ] Graphs [[https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-graphs-and-their-data-structures-section-1/][graphs]]
+       + [ ] DFS
+       + [ ] BFS
+** TODO Switch to C++                                                                                              :CPP:
