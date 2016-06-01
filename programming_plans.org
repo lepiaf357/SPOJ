@@ -6,9 +6,9 @@
 
 * TODO Algorithms                                                                                           :algorithms:
 ** TODO SPOJ Problems                                                                                             :spoj:
-*** IN_PROGRESS Old [50%]                                       :dynamic_programming:binary_search:ad_hoc:combinatorics:
+*** IN_PROGRESS Old [57%] :dynamic_programming:binary_search:ad_hoc:combinatorics:
     * [X] http://www.spoj.com/problems/BYTESM2/
-    * [ ] http://www.spoj.com/problems/AGGRCOW/
+    * [X] http://www.spoj.com/problems/AGGRCOW/
     * [ ] http://www.spoj.com/problems/HPYNOS/
     * [ ] http://www.spoj.com/problems/HUBULLU/
     * [X] http://www.spoj.com/problems/PIGBANK/
@@ -62,6 +62,7 @@
       #+END_SRC
     * [X] http://www.spoj.com/problems/FAVDICE/
     * [X] http://www.spoj.com/problems/PHONELST/
+    * [ ] http://www.spoj.com/problems/GSS1/
 
 ** TODO Topcoder
 *** TODO Get started
@@ -74,4 +75,10 @@
      + [ ] Graphs [[https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-graphs-and-their-data-structures-section-1/][graphs]]
        + [ ] DFS
        + [ ] BFS
+     + [ ] Segmented trees [[https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/#Segment_Trees][sgm_tree]]
+** IN_PROGRESS Needed algorithms
+   + [ ] Binary Search
+     - [ ] Write about the main and abstracted algorithm in the textbook. With examples.
+   + [ ] Segmented trees
+   + 
 ** TODO Switch to C++                                                                                              :CPP:
