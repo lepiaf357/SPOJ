@@ -68,11 +68,12 @@
     * [ ] http://www.spoj.com/problems/ARRAYSUB/
     * [X] http://www.spoj.com/problems/MISERMAN/
     * [ ] http://www.spoj.com/problems/MIXTURES/
-    * [ ] http://www.spoj.com/problems/SBANK/
-    * [ ] http://www.spoj.com/problems/AIBOHP/
+    * [X] http://www.spoj.com/problems/SBANK/
+    * [X] http://www.spoj.com/problems/AIBOHP/
     * [ ] http://www.spoj.com/problems/NHAY/
     * [ ] http://www.spoj.com/problems/JAVAC/
     * [ ] http://www.spoj.com/problems/ETF/
+    * [X] http://www.spoj.com/problems/FARIDA/
 
 ** TODO Topcoder
 *** TODO Get started
