@@ -18,49 +18,28 @@ void matrix_mul_mod(long long A[2][2], long long B[2][2])
     B[1][1]=C[1][1];
 }
 
-void fibonacci_matrix_pow(long long fibonacci_matrix[2][2], int n)
+void fibonacci_matrix_pow(long long fibonacci_matrix_n[2][2], int n)
 {   
     
-    long long fibonacci_first[2][2]; // fibonacci_matrix^1
-    long long fibonacci_second[2][2]; // fibonacci_matrix^2
+    long long fibonacci_tmp[2][2];
 
-    fibonacci_first[0][0] = 1;
-    fibonacci_first[0][1] = 1;
-    fibonacci_first[1][0] = 1;
-    fibonacci_first[1][1] = 0;
+    fibonacci_tmp[0][0] = 1;
+    fibonacci_tmp[0][1] = 1;
+    fibonacci_tmp[1][0] = 1;
+    fibonacci_tmp[1][1] = 0;    
     
-    fibonacci_second[0][0] = 2;
-    fibonacci_second[0][1] = 1;
-    fibonacci_second[1][0] = 1;
-    fibonacci_second[1][1] = 1;
-    
-    
-    if (n == 1)
-    {
-        fibonacci_matrix[0][0] = 1;
-        fibonacci_matrix[0][1] = 1;
-        fibonacci_matrix[1][0] = 1;
-        fibonacci_matrix[1][1] = 0;
-        return;
-    }
-    
-    fibonacci_matrix[0][0] = 2;
-    fibonacci_matrix[0][1] = 1;
-    fibonacci_matrix[1][0] = 1;
-    fibonacci_matrix[1][1] = 1;
-    n -= 2;
+    fibonacci_matrix_n[0][0] = 1;
+    fibonacci_matrix_n[0][1] = 0;
+    fibonacci_matrix_n[1][0] = 0;
+    fibonacci_matrix_n[1][1] = 1;
         
-    while (n)
+    while (n) 
     {
-        if (n == 1)
-        {
-            matrix_mul_mod(fibonacci_first, fibonacci_matrix);
-            break;
-        }
+        if (n & 1) // my boyfriend is a genius :) Love him so much!
+            matrix_mul_mod(fibonacci_tmp, fibonacci_matrix_n);
         
-        matrix_mul_mod(fibonacci_second, fibonacci_matrix);
-        n -= 2;
-
+        matrix_mul_mod(fibonacci_tmp, fibonacci_tmp);
+        n /= 2;
     }
 }
 
@@ -78,7 +57,7 @@ void fibonacci_matrix_pow(long long fibonacci_matrix[2][2], int n)
  */
 long long fibonacci(int n) 
 {
-    long long fibonacci_matrix[2][2];
+    long long fibonacci_matrix_n[2][2];
     
     if (n == 0) 
         return 0;
@@ -86,9 +65,9 @@ long long fibonacci(int n)
     if (n == 1)
         return 1;
     
-    fibonacci_matrix_pow(fibonacci_matrix, n-1);
+    fibonacci_matrix_pow(fibonacci_matrix_n, n-1);
     
-    return fibonacci_matrix[0][0];
+    return fibonacci_matrix_n[0][0];
 }
 
 int main() {
@@ -104,9 +83,17 @@ int main() {
         
         // Sum[i=1...n] F(i) = F(n+2) - 1
         // F(i) = fibonacci(i)
-        sumM = fibonacci(M + 2);   // Sum 1...N-1 N...M  + 1
-        sumN_1 = fibonacci(N + 1); // Sum 1...N-1        + 1
-        res = (sumM - sumN_1) % 1000000007;
+        
+        if (M == N)
+        {
+            res = fibonacci(M) % 1000000007;
+        }
+        else
+        {
+           sumM = fibonacci(M + 2);   // Sum 1...N-1 N...M  + 1
+           sumN_1 = fibonacci(N + 1); // Sum 1...N-1        + 1
+           res = (sumM - sumN_1) % 1000000007;
+        }
         
         // (7 - 2) mod 3 = 7 mod 3 - 2 mod 3 = 1 - 2 = -1
         // (7 - 2) mod 3 = 5 mod 3 = 2
