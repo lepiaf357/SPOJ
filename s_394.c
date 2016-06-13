@@ -23,6 +23,8 @@ long long coin_iterative(int *a, int n)
                 table[n-1] = 1;
         if (a[n-2] != 0)
                 table[n-2] = table[n-1] + 1;
+        else
+                table[n-2] = 0;
 
         for (i = n-3; i >= 0; --i)
         {

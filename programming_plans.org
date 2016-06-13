@@ -67,13 +67,17 @@
     * [X] http://www.spoj.com/problems/HOTELS/
     * [ ] http://www.spoj.com/problems/ARRAYSUB/
     * [X] http://www.spoj.com/problems/MISERMAN/
-    * [ ] http://www.spoj.com/problems/MIXTURES/
+    * [X] http://www.spoj.com/problems/MIXTURES/
     * [X] http://www.spoj.com/problems/SBANK/
     * [X] http://www.spoj.com/problems/AIBOHP/
-    * [ ] http://www.spoj.com/problems/NHAY/
+    * [X] http://www.spoj.com/problems/NHAY/
+      * Able to pass with KR solution
     * [ ] http://www.spoj.com/problems/JAVAC/
-    * [ ] http://www.spoj.com/problems/ETF/
+    * [X] http://www.spoj.com/problems/ETF/
     * [X] http://www.spoj.com/problems/FARIDA/
+    * [ ] http://www.spoj.com/problems/GSS3/
+    * [ ] http://www.spoj.com/problems/HORRIBLE/
+    * [ ] http://www.spoj.com/problems/DANGER/
 
 ** TODO Topcoder
 *** TODO Get started
@@ -81,7 +85,7 @@
     * [ ] Go through introduction
 ** TODO Text Books, Tutorials                                                                            :tutorial:books:
    * The Algorithm Design Manual [[http://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1849967202][amazon_link]]
-   * Topcoder tutorials [[https://www.topcoder.com/community/data-science/data-science-tutorials/][tutorials]] [0/3]
+   * Topcoder tutorials [[https://www.topcoder.com/community/data-science/data-science-tutorials/][tutorials]] [0/4]
      + [ ] Binary serach [[https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/][binary search]]
      + [ ] Graphs [[https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-graphs-and-their-data-structures-section-1/][graphs]]
        + [ ] DFS
@@ -89,6 +93,7 @@
      + [ ] Segmented trees [[https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/#Segment_Trees][sgm_tree]]
        + https://github.com/t3nsor/SPOJ/blob/master/gss3.cpp
        + http://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/
+     + [ ] 
 ** IN_PROGRESS Needed algorithms
    + [ ] Binary Search
      - [ ] Write about the main and abstracted algorithm in the textbook. With examples.
