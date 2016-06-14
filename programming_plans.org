@@ -76,8 +76,8 @@
     * [X] http://www.spoj.com/problems/ETF/
     * [X] http://www.spoj.com/problems/FARIDA/
     * [ ] http://www.spoj.com/problems/GSS3/
-    * [ ] http://www.spoj.com/problems/HORRIBLE/
-    * [ ] http://www.spoj.com/problems/DANGER/
+    * [X] http://www.spoj.com/problems/HORRIBLE/
+    * [X] http://www.spoj.com/problems/DANGER/
 
 ** TODO Topcoder
 *** TODO Get started
@@ -85,14 +85,23 @@
     * [ ] Go through introduction
 ** TODO Text Books, Tutorials                                                                            :tutorial:books:
    * The Algorithm Design Manual [[http://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1849967202][amazon_link]]
-   * Topcoder tutorials [[https://www.topcoder.com/community/data-science/data-science-tutorials/][tutorials]] [0/4]
+   * Topcoder tutorials [[https://www.topcoder.com/community/data-science/data-science-tutorials/][tutorials]] [1/4]
      + [ ] Binary serach [[https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/][binary search]]
      + [ ] Graphs [[https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-graphs-and-their-data-structures-section-1/][graphs]]
        + [ ] DFS
        + [ ] BFS
-     + [ ] Segmented trees [[https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/#Segment_Trees][sgm_tree]]
+     + [X] Segmented trees [[https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/#Segment_Trees][sgm_tree]]
        + https://github.com/t3nsor/SPOJ/blob/master/gss3.cpp
        + http://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/
+         + [ ] Lazy segmented tree
+           + http://www.geeksforgeeks.org/lazy-propagation-in-segment-tree/
+             1) If current segment tree node has any pendind update, than first add that pending update to the current node.
+             2) If the current node's range lies completley in update quaery range:
+                1) Update current node
+                2) Postpone updates to children by setting lazy value to childrens nodes
+             3) If current nodes range overlaps with update range, follow the simple approach as aboves simple update:
+                1) Recur for left and right children
+                2) Update current node with the results from the left and right
      + [ ] 
 ** IN_PROGRESS Needed algorithms
    + [ ] Binary Search

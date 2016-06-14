@@ -10,31 +10,31 @@ int main()
 {
     int t;
     int n, m;
-    
+
     scanf("%d", &t);
-    
+
     while (t--)
     {
         scanf("%d", &n);
-        
+
         int tmp;
         int minimum = INT_MAX;
         set<int> skup;
         set<int>::iterator it;
         int flag = 0;
-        
+
         for (int i = 0; i < n; i++)
         {
             scanf("%d", &tmp);
             skup.insert(tmp);
         }
-                
+
         scanf("%d", &m);
-                
+
         for (int i = 0; i < m; i++)
         {
             scanf("%d", &tmp);
-            
+
             if (skup.find(tmp) != skup.end())
             {
                 printf("0\n");
@@ -47,14 +47,14 @@ int main()
             {
                 skup.insert(tmp);
                 it = skup.find(tmp);
-                
+
                 if (it != skup.begin())
                 {
                     it--;
                     minimum = min(minimum, abs(tmp - *it));
-                    it++; 
+                    it++;
                 }
-                
+
                 if (it != skup.end())
                 {
                     it++;
@@ -63,15 +63,16 @@ int main()
                         minimum = min(minimum, abs(tmp - *it));
                     }
                 }
+                skup.erase(tmp);
             }
         }
         if (!flag)
         {
             printf("%d\n", minimum);
         }
-        
+
         skup.clear();
-        
+
     }
     return 0;
 }
