@@ -65,7 +65,7 @@
     * [X] http://www.spoj.com/problems/GSS1/
       * Note :: Hard problem. Few new concepts.
     * [X] http://www.spoj.com/problems/HOTELS/
-    * [ ] http://www.spoj.com/problems/ARRAYSUB/
+    * [X] http://www.spoj.com/problems/ARRAYSUB/
     * [X] http://www.spoj.com/problems/MISERMAN/
     * [X] http://www.spoj.com/problems/MIXTURES/
     * [X] http://www.spoj.com/problems/SBANK/
@@ -78,6 +78,8 @@
     * [ ] http://www.spoj.com/problems/GSS3/
     * [X] http://www.spoj.com/problems/HORRIBLE/
     * [X] http://www.spoj.com/problems/DANGER/
+    * [ ] http://www.spoj.com/problems/DISUBSTR/
+      * KMP variant: https://www.quora.com/How-do-I-count-the-number-of-distinct-substrings-in-a-given-string-by-the-use-of-the-KMP-prefix-function
 
 ** TODO Topcoder
 *** TODO Get started
