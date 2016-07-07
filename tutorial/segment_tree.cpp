@@ -5,8 +5,8 @@
 
 // Complexity
 // Build tree: O(N lg N)
-// Update tree: O(N lg(N+k))
-// Query tree: O(N lg(N+k))
+// Update tree: O(lg(N+k))
+// Query tree: O(lg(N+k))
 
 //Also added functions for lazy propagation
 
