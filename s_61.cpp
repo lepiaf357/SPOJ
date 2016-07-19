@@ -28,31 +28,33 @@ void buildST(int node, int l, int r)
         int mid = l + (r-l)/2;
         buildST(2*node+1, l, mid);
         buildST(2*node+2, mid+1, r);
+
+        int a = st[2*node+1].second;
+        int b = st[2*node+2].first;
         if (st[2*node+1].second > st[2*node+2].first)
         {
-                st[2*node+1].second -= st[2*node+2].first;
-                st[2*node+2].first = 0;
+                a = st[2*node+1].second - st[2*node+2].first;
+                b = 0;
         }
         else if (st[2*node+1].second < st[2*node+2].first)
         {
-                st[2*node+2].first -= st[2*node+1].second;
-                st[2*node+1].second = 0;
+                b = st[2*node+2].first - st[2*node+1].second;
+                a = 0;
         }
-        else if (st[2*node+2].first == st[2*node+1].second && st[2*node+2].first > 0)
-                st[2*node+2].first = st[2*node+1].second = 0;
+        else if (st[2*node+2].first == st[2*node+1].second)
+                b = a = 0;
 
-
-        st[node].first = st[2*node+1].first + st[2*node+2].first;
-        st[node].second = st[2*node+1].second + st[2*node+2].second;
+        st[node].first = b + st[2*node+1].first;
+        st[node].second = a + st[2*node+2].second;
 }
 
 void updateST(int node, int l, int r, int k)
 {
         if (k < l || k > r)
         {
-                return ;
+                return;
         }
-        if (r == l)
+        if (r == l &&  r == k)
         {
                 a[l] = (a[l] == ')' ? '(' : ')');
                 if (a[l] == ')')
@@ -71,21 +73,24 @@ void updateST(int node, int l, int r, int k)
 
         updateST(2*node+1, l, mid, k);
         updateST(2*node+2, mid+1, r, k);
+
+        int a = st[2*node+1].second;
+        int b = st[2*node+2].first;
         if (st[2*node+1].second > st[2*node+2].first)
         {
-                st[2*node+1].second -= st[2*node+2].first;
-                st[2*node+2].first = 0;
+                a = st[2*node+1].second - st[2*node+2].first;
+                b = 0;
         }
         else if (st[2*node+1].second < st[2*node+2].first)
         {
-                st[2*node+2].first -= st[2*node+1].second;
-                st[2*node+1].second = 0;
+                b = st[2*node+2].first - st[2*node+1].second;
+                a = 0;
         }
-        else if (st[2*node+2].first == st[2*node+1].second && st[2*node+2].first > 0)
-                st[2*node+2].first = st[2*node+1].second = 0;
+        else if (st[2*node+2].first == st[2*node+1].second)
+                b = a = 0;
 
-        st[node].first = st[2*node+1].first + st[2*node+2].first;
-        st[node].second = st[2*node+1].second + st[2*node+2].second;
+        st[node].first = b + st[2*node+1].first;
+        st[node].second = a + st[2*node+2].second;
 
 }
 
@@ -98,9 +103,6 @@ int main()
                 scanf("%d", &n);
                 scanf("%s", a);
                 buildST(0, 0, n-1);
-                for (int j = 0; j < 20; ++j)
-                        printf("%d %d  ", st[j].first, st[j].second);
-                printf("\n");
                 scanf("%d", &m);
                 printf("Test %d:\n", i);
                 if (n & 1)
@@ -127,9 +129,6 @@ int main()
                         }
                         else
                                 updateST(0, 0, n-1, op-1);
-                        for (int j = 0; j < 15; ++j)
-                                printf("%d %d  ", st[j].first, st[j].second);
-                        printf("\n");
 
                 }
         }

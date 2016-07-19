@@ -8,7 +8,7 @@ int tab[1001][1001];
 
 int game_r(int i, int j)
 {
-     if (i > j)
+     if (i >= j)
           return 0;
 
      int f1 = (a[i+1] > a[j]);
